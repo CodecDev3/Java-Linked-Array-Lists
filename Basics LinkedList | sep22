@@ -1,0 +1,32 @@
+// Coded on 30/09/22
+
+import java.util.LinkedList;
+import java.util.Collections;
+
+public class Main{
+    public static void main(String args[]){
+        LinkedList<String> it = new LinkedList<String>();
+        
+        it.add("Infy");
+        String t = "TCS";
+        it.add(t);
+        it.add("Wipro");
+        
+        System.out.println(it);             //[Infy, TCS, Wipro]
+        
+        // adds at First & Last position
+        it.addFirst("HCL");
+        it.addLast("Coforge");
+        System.out.println(it);             //[HCL, Infy, TCS, Wipro, Coforge]
+        
+        // removes First & Last element
+        it.removeFirst();
+        it.removeLast();
+        System.out.println(it);             //[Infy, TCS, Wipro]
+        
+        //  Get the First & Last element
+        System.out.println(it.getFirst());  //Infy
+        System.out.println(it.getLast());   //Wipro
+        
+    }
+}
