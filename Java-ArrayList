@@ -1,0 +1,80 @@
+// Coded 30/09/22
+
+import java.util.ArrayList;
+
+public class Main{
+    public static void main(String args[]){
+        ArrayList<String> cars = new ArrayList<String>();           // OR       ArrayList<String> cars = new ArrayList<>();
+        
+        cars.add("A");
+        // cars.add[1] = "Tata";        // can't do
+        cars.add("Tata");
+        cars.add("C");
+        cars.add("D");
+        
+        String e = "EE";
+        cars.add(e);
+        
+        System.out.println(cars);           // [A, Tata, C, D, EE]
+        System.out.println(cars.get(1));    // Tata         // can't do cars[1], only possible in array
+        
+        
+        // Setting a value (only changes values, which are in existence)
+        cars.set(2,"CCC");
+        System.out.println(cars);           //[A, Tata, CCC, D, EE]
+        
+        // Removes value 
+        cars.remove(2);
+        System.out.println(cars);           //[A, Tata, D, EE]
+        
+        // Length of ArrayList
+        System.out.println(cars.size());    
+
+
+        // printing values one by one
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println(cars.get(i));
+        }
+        // OR
+        for (String i : cars) {
+            System.out.println(i);
+        }
+        
+        
+        // Clears entire ArrayList
+        cars.clear();
+        System.out.println(cars);           //[]
+        
+        
+    }
+}
+   
+   // -------------------- Integer --------------------
+    
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main{
+    public static void main(String args[]){
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        
+        num.add(10);
+        int b = 20;
+        num.add(b);
+        int c = 15;
+        num.add(b-c);
+        num.add(999);
+        
+        System.out.println(num);            //[10, 20, 5, 999]
+        
+        Collections.sort(num);
+        
+        System.out.println(num);            //[5, 10, 20, 999]
+        
+        // can even add a number at a position (not set)
+        //Suppose
+        num.add(2,500);
+        System.out.println(num);            //[5, 10, 500, 20, 999]
+        
+       }
+}
